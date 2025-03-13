@@ -38,7 +38,7 @@ const HeroSection = () => {
         <BentoBox size="md" colSpan={1} rowSpan={1} animationDelay={200} className="overflow-hidden p-0">
           <div className="h-full w-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
             <div className="relative w-full h-full">
-              <div className="absolute inset-0 bg-[url('https://placehold.co/400x400/e2e8f0/1e293b?text=Profile+Photo')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('https://drive.google.com/file/d/1RuuOECMFIgjsKdpCfwr-hCUEn_UjOILF/view?usp=sharing')] bg-cover bg-center" />
             </div>
           </div>
         </BentoBox>
