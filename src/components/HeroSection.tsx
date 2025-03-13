@@ -1,3 +1,4 @@
+
 import BentoBox from "./BentoBox";
 import { useEffect, useState } from "react";
 const HeroSection = () => {
@@ -34,8 +35,8 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        {/* Profile photo */}
-        <BentoBox size="md" colSpan={1} rowSpan={1} animationDelay={200} className="overflow-hidden p-0">
+        {/* Profile photo - square box */}
+        <BentoBox size="md" colSpan={1} rowSpan={1} animationDelay={200} className="overflow-hidden p-0 aspect-square">
           <div className="h-full w-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
             <div className="relative w-full h-full">
               <div className="absolute inset-0 bg-[url('https://placehold.jp/009468/ffffff/400x400.png?text=profile%20image')] bg-cover bg-center" />
@@ -43,22 +44,41 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        {/* Right tall box */}
-        <BentoBox size="lg" colSpan={1} rowSpan={2} animationDelay={300} className="bg-gradient-to-br from-secondary/50 to-accent/50 p-6">
+        {/* Right tall box - adjusted height to match profile photo */}
+        <BentoBox size="md" colSpan={1} rowSpan={1} animationDelay={300} className="bg-gradient-to-br from-secondary/50 to-accent/50 p-6 aspect-square">
           <h3 className="text-xl font-medium mb-4">Creative Portfolio</h3>
           <p className="text-muted-foreground mb-4">
             Blending design aesthetics with technical expertise to create meaningful digital experiences
           </p>
           <div className="grid grid-cols-2 gap-2 mt-auto py-0">
-            <div className="bg-white/30 h-16 rounded-lg"></div>
-            <div className="bg-white/30 h-16 rounded-lg"></div>
-            <div className="bg-white/30 h-16 rounded-lg"></div>
-            <div className="bg-white/30 h-16 rounded-lg"></div>
+            <div className="bg-white/30 h-10 rounded-lg"></div>
+            <div className="bg-white/30 h-10 rounded-lg"></div>
           </div>
         </BentoBox>
 
-        {/* Additional small boxes in bottom row */}
-        <BentoBox size="sm" animationDelay={400} className="bg-gradient-to-r from-primary/5 to-primary/10 group">
+        {/* Skills box - made into a square */}
+        <BentoBox 
+          size="md" 
+          colSpan={1} 
+          rowSpan={1} 
+          animationDelay={600} 
+          className="p-0 overflow-hidden relative aspect-square"
+        >
+          <div className="absolute inset-0 bg-gradient-to-tr from-accent to-background/30"></div>
+          <div className="absolute inset-0 p-6 flex flex-col justify-between py-[24px] my-0 px-[22px]">
+            <div>
+              <h3 className="text-xl font-medium mb-2">Skills</h3>
+              <p className="text-sm text-muted-foreground">Figma, Penpot, Affinity tools, Kdenkive, Java, Frontend development, Salesforce</p>
+            </div>
+          </div>
+        </BentoBox>
+
+        {/* Square boxes for Design, Development, Photography - all made with aspect-square */}
+        <BentoBox 
+          size="sm" 
+          animationDelay={400} 
+          className="bg-gradient-to-r from-primary/5 to-primary/10 group aspect-square"
+        >
           <div className="flex flex-col h-full justify-center items-center">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
               <span className="text-primary">✍️</span>
@@ -67,7 +87,11 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        <BentoBox size="sm" animationDelay={500} className="bg-gradient-to-r from-primary/5 to-primary/10 group">
+        <BentoBox 
+          size="sm" 
+          animationDelay={500} 
+          className="bg-gradient-to-r from-primary/5 to-primary/10 group aspect-square"
+        >
           <div className="flex flex-col h-full justify-center items-center">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
               <span className="text-primary">🖥️</span>
@@ -76,30 +100,11 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        {/* Center tall box */}
-        <BentoBox size="lg" colSpan={1} rowSpan={2} animationDelay={600} className="p-0 overflow-hidden relative">
-          <div className="absolute inset-0 bg-gradient-to-tr from-accent to-background/30"></div>
-          <div className="absolute inset-0 p-6 flex flex-col justify-between py-[24px] my-0 px-[22px]">
-            <div>
-              <h3 className="text-xl font-medium mb-2">Skills</h3>
-              <p className="text-sm text-muted-foreground">Figma, Penpot, Affinity tools, Kdenkive, Java, Frontend development, Salesforce</p>
-            </div>
-            {/*             <div className="space-y-3">
-              {["UI/UX Design", "Web Development", "Photography", "Videography", "Data Visualization"].map((skill, i) => (
-                <div key={i} className="flex items-center">
-                  <div className="w-full bg-white/30 rounded-full h-2">
-                    <div 
-                      className="bg-primary rounded-full h-2" 
-                      style={{ width: `${80 - i * 10}%`, transition: "width 1s ease-in-out" }} 
-                    />
-                  </div>
-                </div>
-              ))}
-             </div> */}
-          </div>
-        </BentoBox>
-
-        <BentoBox size="sm" animationDelay={700} className="bg-gradient-to-r from-primary/5 to-primary/10 group">
+        <BentoBox 
+          size="sm" 
+          animationDelay={700} 
+          className="bg-gradient-to-r from-primary/5 to-primary/10 group aspect-square"
+        >
           <div className="flex flex-col h-full justify-center items-center">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
               <span className="text-primary">📸</span>
