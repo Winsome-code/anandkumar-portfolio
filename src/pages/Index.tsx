@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import HeroSection from "@/components/HeroSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import WorkSection from "@/components/WorkSection";
+import ContactSection from "@/components/ContactSection";
+import Navbar from "@/components/Navbar";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    // Smooth scroll behavior for the entire page
+    document.documentElement.style.scrollBehavior = "smooth";
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = "";
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="bg-gradient-to-br from-background to-secondary/30 min-h-screen">
+      <Navbar />
+      
+      <main className="container">
+        <HeroSection />
+        <ExperienceSection />
+        <WorkSection />
+        <ContactSection />
+      </main>
+      
+      <footer className="py-8 border-t border-border">
+        <div className="container text-center text-sm text-muted-foreground">
+          <p>© {new Date().getFullYear()} Anand Kumar Yalla. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };
