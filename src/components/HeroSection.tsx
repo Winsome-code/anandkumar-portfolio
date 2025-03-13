@@ -55,8 +55,8 @@ const HeroSection = () => {
           className="p-6"
           style={{ background: "linear-gradient(270deg, rgba(55,203,159,1) 0%, rgba(18,156,145,1) 100%)" }}
         >
-          <h3 className="text-xl font-medium mb-4 text-white">Creative Portfolio</h3>
-          <p className="text-white/80 mb-4">
+          <h3 className="text-xl font-medium mb-4 text-black">Creative Portfolio</h3>
+          <p className="text-black/80 mb-4">
             Blending design aesthetics with technical expertise to create meaningful digital experiences
           </p>
           <div className="grid grid-cols-2 gap-2 mt-auto py-0">
