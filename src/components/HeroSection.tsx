@@ -35,17 +35,17 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        {/* Profile photo - square box */}
+        {/* Profile photo - square box with ironman image */}
         <BentoBox size="md" colSpan={1} rowSpan={1} animationDelay={200} className="overflow-hidden p-0 aspect-square">
-          <div className="h-full w-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center">
+          <div className="h-full w-full flex items-center justify-center">
             <div className="relative w-full h-full">
-              <div className="absolute inset-0 bg-[url('https://placehold.jp/009468/ffffff/400x400.png?text=profile%20image')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635863138275-d9b33299680b')] bg-cover bg-center" />
             </div>
           </div>
         </BentoBox>
 
-        {/* Right tall box - adjusted height to match profile photo */}
-        <BentoBox size="md" colSpan={1} rowSpan={1} animationDelay={300} className="bg-gradient-to-br from-secondary/50 to-accent/50 p-6 aspect-square">
+        {/* Right tall box - height matches combined height of profile photo + two skill boxes */}
+        <BentoBox size="md" colSpan={1} rowSpan={3} animationDelay={300} className="bg-gradient-to-br from-secondary/50 to-accent/50 p-6">
           <h3 className="text-xl font-medium mb-4">Creative Portfolio</h3>
           <p className="text-muted-foreground mb-4">
             Blending design aesthetics with technical expertise to create meaningful digital experiences
@@ -56,7 +56,7 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        {/* Skills box - made into a square */}
+        {/* Skills box - square */}
         <BentoBox 
           size="md" 
           colSpan={1} 
@@ -73,43 +73,51 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        {/* Square boxes for Design, Development, Photography - all made with aspect-square */}
+        {/* Design box with design image */}
         <BentoBox 
           size="sm" 
           animationDelay={400} 
-          className="bg-gradient-to-r from-primary/5 to-primary/10 group aspect-square"
+          className="p-0 overflow-hidden group aspect-square relative"
         >
-          <div className="flex flex-col h-full justify-center items-center">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1561070791-2526d30994b5')] bg-cover bg-center opacity-80"></div>
+          <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/5 transition-colors"></div>
+          <div className="absolute inset-0 flex flex-col h-full justify-center items-center">
+            <div className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
               <span className="text-primary">✍️</span>
             </div>
-            <p className="text-sm font-medium">Design</p>
+            <p className="text-sm font-medium text-white drop-shadow-md">Design</p>
           </div>
         </BentoBox>
 
+        {/* Development box with code image */}
         <BentoBox 
           size="sm" 
           animationDelay={500} 
-          className="bg-gradient-to-r from-primary/5 to-primary/10 group aspect-square"
+          className="p-0 overflow-hidden group aspect-square relative"
         >
-          <div className="flex flex-col h-full justify-center items-center">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6')] bg-cover bg-center opacity-80"></div>
+          <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/5 transition-colors"></div>
+          <div className="absolute inset-0 flex flex-col h-full justify-center items-center">
+            <div className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
               <span className="text-primary">🖥️</span>
             </div>
-            <p className="text-sm font-medium">Development</p>
+            <p className="text-sm font-medium text-white drop-shadow-md">Development</p>
           </div>
         </BentoBox>
 
+        {/* Photography box with camera image */}
         <BentoBox 
           size="sm" 
           animationDelay={700} 
-          className="bg-gradient-to-r from-primary/5 to-primary/10 group aspect-square"
+          className="p-0 overflow-hidden group aspect-square relative"
         >
-          <div className="flex flex-col h-full justify-center items-center">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32')] bg-cover bg-center opacity-80"></div>
+          <div className="absolute inset-0 bg-primary/10 group-hover:bg-primary/5 transition-colors"></div>
+          <div className="absolute inset-0 flex flex-col h-full justify-center items-center">
+            <div className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
               <span className="text-primary">📸</span>
             </div>
-            <p className="text-sm font-medium">Photography</p>
+            <p className="text-sm font-medium text-white drop-shadow-md">Photography</p>
           </div>
         </BentoBox>
       </div>
