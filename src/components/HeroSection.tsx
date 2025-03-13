@@ -35,19 +35,28 @@ const HeroSection = () => {
           </div>
         </BentoBox>
 
-        {/* Profile photo - square box with ironman image */}
+        {/* Profile photo - square box with 3D character head image */}
         <BentoBox size="md" colSpan={1} rowSpan={1} animationDelay={200} className="overflow-hidden p-0 aspect-square">
           <div className="h-full w-full flex items-center justify-center">
-            <div className="relative w-full h-full">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635863138275-d9b33299680b')] bg-cover bg-center" />
+            <div className="relative w-full h-full group transition-transform duration-300 hover:scale-105">
+              <div 
+                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620064916958-605375619af8')] bg-cover bg-center transform transition-transform duration-300 group-hover:rotate-3" 
+              />
             </div>
           </div>
         </BentoBox>
 
         {/* Right tall box - height matches combined height of profile photo + two skill boxes */}
-        <BentoBox size="md" colSpan={1} rowSpan={3} animationDelay={300} className="bg-gradient-to-br from-secondary/50 to-accent/50 p-6">
-          <h3 className="text-xl font-medium mb-4">Creative Portfolio</h3>
-          <p className="text-muted-foreground mb-4">
+        <BentoBox 
+          size="md" 
+          colSpan={1} 
+          rowSpan={3} 
+          animationDelay={300} 
+          className="p-6"
+          style={{ background: "linear-gradient(270deg, rgba(55,203,159,1) 0%, rgba(18,156,145,1) 100%)" }}
+        >
+          <h3 className="text-xl font-medium mb-4 text-white">Creative Portfolio</h3>
+          <p className="text-white/80 mb-4">
             Blending design aesthetics with technical expertise to create meaningful digital experiences
           </p>
           <div className="grid grid-cols-2 gap-2 mt-auto py-0">
