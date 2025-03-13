@@ -124,7 +124,7 @@ const HeroSection = () => {
               <h3 className="text-xl font-medium mb-2">Skills</h3>
               <p className="text-sm text-muted-foreground">Expertise across different domains</p>
             </div>
-            <div className="space-y-3">
+            {/*             <div className="space-y-3">
               {["UI/UX Design", "Web Development", "Photography", "Videography", "Data Visualization"].map((skill, i) => (
                 <div key={i} className="flex items-center">
                   <div className="w-full bg-white/30 rounded-full h-2">
@@ -135,7 +135,7 @@ const HeroSection = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </BentoBox>
 
