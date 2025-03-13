@@ -40,7 +40,7 @@ const HeroSection = () => {
           <div className="h-full w-full flex items-center justify-center">
             <div className="relative w-full h-full group transition-transform duration-300 hover:scale-105">
               <div 
-                className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620064916958-605375619af8')] bg-cover bg-center transform transition-transform duration-300 group-hover:rotate-3" 
+                className="absolute inset-0 bg-[url('https://unsplash.com/photos/VtZdkY6NmRg')] bg-cover bg-center transform transition-transform duration-300 group-hover:rotate-3" 
               />
             </div>
           </div>
